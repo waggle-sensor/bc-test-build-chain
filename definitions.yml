@@ -1,0 +1,25 @@
+version: "2.1"
+dependencies: ./dependency-tree.yml
+default:
+  build-command:
+    upstream: ./build.sh
+    current: ./build.sh
+    after:
+      upstream: rm -rf ./*
+build:
+  - project: waggle-sensor/bc-test-cboot
+    build-command:
+      upstream: ./build.sh
+      current: ./build.sh
+  - project: waggle-sensor/bc-test-kernel
+    build-command:
+      upstream: ./build.sh
+      current: ./build.sh
+  - project: waggle-sensor/bc-test-image
+    build-command:
+      upstream: ./build.sh
+      current: ./build.sh
+  - project: waggle-sensor/bc-test-project
+    build-command:
+      upstream: ./build.sh
+      current: ./build.sh

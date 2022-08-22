@@ -1,0 +1,12 @@
+version: "2.1"
+dependencies:
+  - project: waggle-sensor/bc-test-project
+  - project: waggle-sensor/bc-test-image
+    dependencies:
+      - project: waggle-sensor/bc-test-project
+  - project: waggle-sensor/bc-test-kernel
+    dependencies:
+      - project: waggle-sensor/bc-test-image
+  - project: waggle-sensor/bc-test-cboot
+    dependencies:
+      - project: waggle-sensor/bc-test-image
